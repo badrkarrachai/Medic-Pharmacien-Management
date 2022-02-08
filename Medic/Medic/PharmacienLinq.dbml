@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="pharmacien" Class="PharmacienLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LENOVO-LEGION\SQLEXPRESS;Initial Catalog=pharmacien;Integrated Security=True" SettingsObjectName="Medic.Properties.Settings" SettingsPropertyName="pharmacienConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.client" Member="clients">
+    <Type Name="client">
+      <Column Name="Id_client" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Full_name_client" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Email_client" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Date_Naissance_client" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Tele_client" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Address_client" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Maladie" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Association Name="client_Med_Order" Member="Med_Orders" ThisKey="Id_client" OtherKey="Id_client" Type="Med_Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Medicaments" Member="Medicaments">
+    <Type Name="Medicament">
+      <Column Name="Id_Med" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name_Med" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="End_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Id_supplier" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Medicament_Med_Order" Member="Med_Orders" ThisKey="Id_Med" OtherKey="Id_Med" Type="Med_Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Med_Order" Member="Med_Orders">
+    <Type Name="Med_Order">
+      <Column Name="Id_client" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_Med" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Order_Date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Total_Price" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Association Name="client_Med_Order" Member="client" ThisKey="Id_client" OtherKey="Id_client" Type="client" IsForeignKey="true" />
+      <Association Name="Medicament_Med_Order" Member="Medicament" ThisKey="Id_Med" OtherKey="Id_Med" Type="Medicament" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

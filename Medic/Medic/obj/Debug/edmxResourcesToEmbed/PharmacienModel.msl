@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="pharmacienModelStoreContainer" CdmEntityContainer="pharmacienEntities">
+    <EntitySetMapping Name="supplier">
+      <EntityTypeMapping TypeName="pharmacienModel.supplier">
+        <MappingFragment StoreEntitySet="supplier">
+          <ScalarProperty Name="Id_supplier" ColumnName="Id_supplier" />
+          <ScalarProperty Name="Full_name_supplier" ColumnName="Full_name_supplier" />
+          <ScalarProperty Name="Email_supplier" ColumnName="Email_supplier" />
+          <ScalarProperty Name="Tele_supplier" ColumnName="Tele_supplier" />
+          <ScalarProperty Name="Address_supplier" ColumnName="Address_supplier" />
+          <ScalarProperty Name="Region_supplier" ColumnName="Region_supplier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

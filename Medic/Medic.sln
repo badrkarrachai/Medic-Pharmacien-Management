@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medic", "Medic\Medic.csproj", "{E4645A09-A413-413C-9842-22888AF10212}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Medic Setup", "Medic Setup\Medic Setup.vdproj", "{45ABEC4C-D988-4232-809C-A7F5733BB631}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4645A09-A413-413C-9842-22888AF10212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4645A09-A413-413C-9842-22888AF10212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4645A09-A413-413C-9842-22888AF10212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4645A09-A413-413C-9842-22888AF10212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45ABEC4C-D988-4232-809C-A7F5733BB631}.Debug|Any CPU.ActiveCfg = Debug
+		{45ABEC4C-D988-4232-809C-A7F5733BB631}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2859CCDC-9867-4118-AC83-AB6D217184AA}
+	EndGlobalSection
+EndGlobal

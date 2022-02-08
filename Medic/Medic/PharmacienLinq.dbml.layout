@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PharmacienLinq">
+  <DataContextMoniker Name="/PharmacienLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9d06dc1a-a321-4d0d-ac35-c1efce9e1d45" absoluteBounds="5, 2.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PharmacienLinqDataContext/client" />
+      <nestedChildShapes>
+        <elementListCompartment Id="708085f2-6563-4153-9f27-cc479baa035a" absoluteBounds="5.015, 3.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="696ad86f-cba6-40f0-b62e-a9b1c7b52c2c" absoluteBounds="2.125, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/PharmacienLinqDataContext/Medicament" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c1c3c4f-9bf1-4d6d-a055-a8125d57a3d6" absoluteBounds="2.14, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0acb1005-a76c-422d-ae9f-5aa59b0aa6b4" absoluteBounds="4.75, 0.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/PharmacienLinqDataContext/Med_Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="23f66f44-5496-4718-86a7-0a06808e8258" absoluteBounds="4.765, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.875 : 2.625); (5.875 : 2.27089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PharmacienLinqDataContext/client/client_Med_Order" />
+      <nodes>
+        <classShapeMoniker Id="9d06dc1a-a321-4d0d-ac35-c1efce9e1d45" />
+        <classShapeMoniker Id="0acb1005-a76c-422d-ae9f-5aa59b0aa6b4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.125 : 1.69794840494792); (4.75 : 1.69794840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PharmacienLinqDataContext/Medicament/Medicament_Med_Order" />
+      <nodes>
+        <classShapeMoniker Id="696ad86f-cba6-40f0-b62e-a9b1c7b52c2c" />
+        <classShapeMoniker Id="0acb1005-a76c-422d-ae9f-5aa59b0aa6b4" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
